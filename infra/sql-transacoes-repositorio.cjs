@@ -12,14 +12,12 @@ class SqlTransacoesRepositorio {
         }
     }
 
-    async criarTransacoes(transacao) {
-        const consulta = `INSERT INT transacoes(descricao, categoria, valor)
+    async criarTransacao(transacao) {
+        const consulta = `INSERT INTO transacoes(descricao, categoria, valor)
              VALUES ($1, $2, $3) RETURNING * `;
         const valores = [transacao.descricao, transacao.categoria, transacao.valor];
-        await Pool.query(consulta, valores);
+        await pool.query(consulta, valores);
     }
-
-
 }
 
 module.exports = SqlTransacoesRepositorio

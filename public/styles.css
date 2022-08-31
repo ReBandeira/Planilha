@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;700&display=swap');
+
+* {
+  font-family: 'Source Sans 3', sans-serif;
+  color: #2f2f33;
+  margin: 0 auto;
+}
+
+.pagina {
+  max-width: 100%;
+  padding: 0 16px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  z-index: 1;
+}
+
+.conteudo {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+h1 {
+  font-size: 51px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 56px;
+}
+
+.informacao {
+  width: 100%;
+  text-align: center;
+  background-color: #F5F6FA;
+  padding: 16px 0;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.informacao p {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.lista-transacoes {
+  width: 100%;
+}
+
+.lista-transacoes .coluna-descricao {
+  text-align: left;
+}
+
+.lista-transacoes .coluna-categoria {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.lista-transacoes .coluna-valor {
+  text-align: right;
+}
+
+.lista-transacoes th {
+  padding: 8px 0;
+}
+
+.lista-transacoes td {
+  padding: 16px 0;
+}
+
+.lista-transacoes h3 {
+  font-size: 14px;
+  color: #757680;
+}
+
+.botoes {
+  padding: 24px 0;  
+  justify-content: center;  
+
+}
+
+.botoes button {
+  padding: 8px 24px;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 18px;
+  min-width: 200px;  
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  background-color: #E02B57;
+  color: #fff;  
+}
+
+.botoes button:hover {
+  transform: scale(1.0175);
+  opacity: 0.9;
+}
+
+.add-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #dfdfe2;
+  padding: 20px;
+  border: 5px , solid, #2f2f33;
+  border-radius: 8px;  
+  cursor: pointer;
+  position: sticky;
+  z-index: 2;  
+  align-content: center;
+  bottom: 30%;
+  display: none;
+}
+
+.add-container p  {
+  flex: 1;
+  max-width: 5%;
+  margin-right: 5px;
+  margin-bottom: 5px;   
+}
+
+.add-container p i {
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.add-container p i:hover {
+  transform: scale(1.0175);
+  opacity: 0.9;
+}
+
+.add-container form {
+  margin: auto;  
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight:normal;
+  border: none; 
+}
+
+.add-container h3 {
+  flex-flow: wrap;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 4%;
+}
+
+.add-container fieldset {
+  display: flex;
+  flex-direction: column; 
+  font-weight:normal;  
+  border: none;   
+}
+
+.add-container #container-info label {  
+  text-align: left;
+  min-width: 200px;
+  max-width: 90%; 
+  
+}
+
+.add-container #container-info input {
+  min-width: 200px;
+  text-align: left;
+  font-size: 16px;  
+  max-width: 90%;
+  padding: 5px;
+}
+
+.add-container button {
+  padding: 8px 24px;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 600px;
+  line-height: 24px;
+  font-size: 18px;
+  min-width: 200px;
+  max-width: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: #E02B57;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 0.4px; 
+  align-content: center;
+  
+}   
+
+.visible {
+  display: flex;  
+}
+
+@media only screen and (max-width: 600px) {
+  .botoes {
+    flex-direction: column;  
+    width: 70%;  
+  }
+  .botoes button {
+    justify-content: center;
+    width: 100%;
+    margin: 5px;
+   
+    
+  }
+}

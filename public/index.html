@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/cae8faad04.js" crossorigin="anonymous"></script>
+    <title>Desafio JS 3.1</title>
+</head>
+
+<body>
+    <div class='pagina'>
+        <div class='conteudo'>
+            <h1>Planilha de gastos</h1>
+
+            <div class='informacao'>
+                <p id='saldo'>Carregando saldo...</p>
+            </div>
+
+            <table class='lista-transacoes'>
+                <thead>
+                    <th class='coluna-descricao'>
+                        <h3>DESCRIÇÃO</h3>
+                    </th>
+                    <th class='coluna-categoria'>
+                        <h3>CATEGORIA</h3>
+                    </th>
+                    <th class='coluna-valor'>
+                        <h3>VALOR</h3>
+                    </th>
+                </thead>
+                <tbody id='lista-transacoes-conteudo'>
+                    <tr>
+                        <td>Carregando dados...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class='botoes'>
+            <button class='despesa' id='botao-despesa'>Adicionar despesa</button>
+            <button class='receita' id='botao-receita'>Adicionar receita</button>
+        </div>
+
+        <div class="add-container" id="add-container">
+            <p><i class="fa-regular fa-circle-xmark" type="button"></i></p>
+            <h3 id="titulo-container"></h3>
+            <form id="container-info">
+                <fieldset class="descricao">
+                    <label id="label-descricao" for="descricao"></label>
+                    <input id="descricao" type="text" name="descricao">
+                </fieldset>
+                <fieldset class="valor">
+                    <label id="label-valor" for="valor"></label>
+                    <input id="valor" type="currency" name="valor" min="1" step="0,01">
+                </fieldset>
+                <button type="button" id="botao-confirmacao">Salvar!</button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

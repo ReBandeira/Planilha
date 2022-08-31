@@ -113,7 +113,7 @@ h1 {
   z-index: 2;  
   align-content: center;
   bottom: 30%;
-  
+  display: none;
 }
 
 .add-container p  {
@@ -192,7 +192,7 @@ h1 {
 }   
 
 .visible {
-  display: none;  
+  display: flex;  
 }
 
 @media only screen and (max-width: 600px) {

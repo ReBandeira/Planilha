@@ -43,8 +43,9 @@ function limpaInput(descricao, valor) {
     return botao.currentTarget ? true : false;
 }*/
 
-function toggleShowContainer(addContainer) {
-    //addContainer.classList.add("visible");  
+function toggleShowContainer() {
+    //addContainer.classList.add("visible"); 
+     
     addContainer.classList.toggle("visible")
     return console.log(addContainer.classList.value)
 }

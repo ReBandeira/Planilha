@@ -3,6 +3,7 @@
 let saldoTotal = document.getElementById("saldo");
 const addContainer = document.getElementById("add-container");
 const botoes = Array.from(document.querySelector(".botoes").children);
+const closeBtn = document.getElementById("close-btn");
 
 let transacoes = [];
 
@@ -13,8 +14,6 @@ function trataStringParaNumero(valor) {
 function formataValorUsuario(valor) {
     return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2 }).format(valor);
 };
-
-
 
 function addDadosTabela(transacoes) {
     let conteudoTabela = document.querySelector('tbody');
@@ -33,8 +32,8 @@ function addDadosTabela(transacoes) {
 }
 
 function limpaInput(descricao, valor) {
-    descricao.value = "";
-    valor.value = "";
+    descricao.innerText = "";
+    valor.innerText = "";
 }
 
 /*function cancelForm (botao) {
@@ -44,17 +43,12 @@ function limpaInput(descricao, valor) {
 }*/
 
 function toggleShowContainer() {
-    //addContainer.classList.add("visible"); 
-     
     addContainer.classList.toggle("visible")
     return console.log(addContainer.classList.value)
 }
 
 function desabilitaBotao(botao) {
     addContainer.classList.contains("visible") ? botao.disabled = false : botao.disabled = true;
-
-    //return console.log(botao.disabled.value)
-
 }
 
 function getBtnClicado(botoes) {
@@ -85,7 +79,7 @@ function showForm(e) {
         outroBotao = botaoClicado.previousElementSibling;
     };
 
-    toggleShowContainer(addContainer);
+    toggleShowContainer();
     desabilitaBotao(outroBotao);
     addInfo(addContainer);
 };
@@ -138,9 +132,9 @@ async function addInfo() {
     inputValor.setAttribute("placeholder", "R$  ");
     botaoConfirmacaoContainer.innerText = `Salvar ${tipoInfo}!`;
 
-    if (botaoFechaForm.addEventListener("click", () => {
+    if (closeBtn.addEventListener("click", () => {
         limpaInput(inputDescricao.value, inputValor.value)
-        toggleShowContainer(addContainer);
+        toggleShowContainer();
         return;
     }));
 
@@ -162,7 +156,7 @@ async function addInfo() {
             tipoInfo,
             inputValor.value);
         limpaInput(inputDescricao.value, inputValor.value);
-        toggleShowContainer(addContainer);
+        toggleShowContainer();
         console.log(novaTransacao)
         console.log(`${tipoInfo} salva!`);
         await getDataTransacoes()

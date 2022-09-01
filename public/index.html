@@ -44,8 +44,8 @@
             <button class='receita' id='botao-receita'>Adicionar receita</button>
         </div>
 
-        <div class="add-container" id="add-container">
-            <p id="close-btn" type="button"><i class="fa-regular fa-circle-xmark"></i></p>
+        <div class="add-container hidden" id="add-container">
+            <p id="close-btn" class="close-container" type="button"><i class="fa-regular fa-circle-xmark"></i></p>
             <h3 id="titulo-container"></h3>
             <form id="container-info">
                 <fieldset class="descricao">
@@ -56,7 +56,7 @@
                     <label id="label-valor" for="valor"></label>
                     <input id="valor" type="currency" name="valor" min="1" step="0,01">
                 </fieldset>
-                <button type="button" id="botao-confirmacao">Salvar!</button>
+                <button type="button" class="close-container" id="botao-confirmacao">Salvar!</button>
             </form>
         </div>
     </div>

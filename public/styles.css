@@ -92,11 +92,15 @@ h1 {
   letter-spacing: 0.4px;
   background-color: #E02B57;
   color: #fff;  
+  transform: scale(1.0175);
 }
 
-.botoes button:hover {
-  transform: scale(1.0175);
+.botoes button:hover {  
   opacity: 0.9;
+}
+
+button:disabled, button:disabled:hover {
+  opacity: 0.4;
 }
 
 .add-container {
@@ -113,7 +117,6 @@ h1 {
   z-index: 2;  
   align-content: center;
   bottom: 30%;
-  display: none;
 }
 
 .add-container p  {
@@ -187,12 +190,11 @@ h1 {
   color: #fff;
   cursor: pointer;
   letter-spacing: 0.4px; 
-  align-content: center;
-  
+  align-content: center;  
 }   
 
-.visible {
-  display: flex;  
+.hidden {
+  display: none;  
 }
 
 @media only screen and (max-width: 600px) {
